@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("Design sem nome (76)");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: #D9D9D9;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #C21C19;
+      outline: none;
+      text-decoration: !important;
+      color: black;
+    }
+    .white h1 {
+      color: white;
+    }
+    .black p {
+      font-size: 18px;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2155203774629634');
+  fbq('track', 'AddToCart');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2155203774629634&ev=AddToCart&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body> 
+  <div class="container">
+    <div class="black">
+      <div id="primeira">
+        <div class="question">
+          <h1>¡Hola!</h1>
+          <p>A cambio de <span style="color: #C21C19 !important;">Salvar tu Salud</span> ¿Invertirías unos segundos en hacer un descubrimiento?</p>
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="segunda()">Sí</button>
+          <button class="btn" onclick="segunda()">No</button>
+        </div>
+      </div>
+      <div id="segunda" class="hide">
+        <div class="question">
+          <h1>Vale, pues vamos..</h1>
+          <p>EJERCER EN EL MOMENTO QUE USTED ELIJA </p>
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="terceira()">SÍ</button>
+          <button class="btn" onclick="terceira()">NO</button>
+        </div>
+      </div>
+      <div id="terceira" class="hide">
+        <div class="question">
+          <h1>Pregunta 3</h1>
+          <p>BEBER AGUA REGULARMENTE</p>
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="quarta()">SÍ</button>
+          <button class="btn" onclick="quarta()">NO</button>
+        </div>
+      </div>
+      <div id="quarta" class="hide">
+        <div class="question">
+          <h1>¡Muy bien!</h1>
+          <p>El acceso a esta información es limitado, ¿Pretendes quedarte hasta el final?</p>
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="redirect()">Sí</button>
+          <button class="btn" onclick="redirect()">No</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; font-weight: normal;"><span style="color: #EBE9E9 !important;">© 2022 – Todos los derechos reservados. Este sitio no es parte ni está respaldado por Facebook. Facebook es una marca comercial de Facebook, Inc.</span> </p>
+    <p style="text-align: center; font-weight: normal;"><a href="https://keilaperez.site/termos.html" style="color: grey;">Terminos de uso</a> | <a href="https://keilaperez.site/privacidade" style="color: grey;">Política de privacidad</a></p>
+  </div>
+  <script>
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("quarta").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("quarta").classList.remove("hide")
+    }
+    function quarta() {
+      document.getElementById("terceira").classList.add("hide")
+      document.getElementById("quarta").classList.remove("hide")
+    }
+    function redirect() {
+      location.href = "https://protocolodosucesso.online/" 
+    }
+  </script>
+</body>
+</html>
